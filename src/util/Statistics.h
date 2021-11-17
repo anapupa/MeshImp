@@ -71,7 +71,7 @@ private:
 	void CalcTriangelQuality(int, vert *);
 	void CalcNumTriangles(int, vert *);
 	void CalcNumNonObtuse(int, vert *);
-	double Statistics::SingleTriangleQuality(int, int, int, vert *);	
+	double SingleTriangleQuality(int, int, int, vert *);
 	void ErrWarnMessage(size_t lineNum, std::string message, size_t mess_id);
 };
 

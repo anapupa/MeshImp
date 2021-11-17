@@ -46,6 +46,11 @@
 bool isObtuse;
 bool isAcute;
 
+#ifdef __unix
+#define fopen_s(pFile,filename,mode) ((*(pFile))=fopen((filename),  (mode)))==NULL
+#define errno_t error_t
+#endif
+
 void MeshImp::ErrWarnMessage(size_t lineNum, std::string message, size_t mess_id)
 {
 	//mess_id =0 for error (exit)
@@ -291,7 +296,8 @@ void MeshImp::Simp(int targetNumSamples, int samplingBudget, int numSurfaceLayer
 	fprintf(stdout, "\n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
 	fprintf(stdout, "****************************** Simplification Started ***************************");
 	fprintf(stdout, "\n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
-	
+
+   std::cout << targetNumSamples << std::endl;
 	Statistics myStats;
 	myStats.GetAllStats(numVert_imp, Vert_imp);
 

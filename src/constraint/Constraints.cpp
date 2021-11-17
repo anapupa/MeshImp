@@ -30,6 +30,7 @@
 
 #include <stdlib.h>
 #include <algorithm>
+#include <cfloat>
 
 //#include "DrawSpheresDebug.h"//for debugging  
 

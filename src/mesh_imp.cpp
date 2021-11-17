@@ -175,7 +175,7 @@ void ParseInput(int argc, char**argv, struct Switches *mySwitches, char*&filenam
 	mySwitches->nonobt = false;
 	mySwitches->simp = false;
 	mySwitches->numRing = 3;
-	mySwitches->samplingBudget = 10;
+	mySwitches->samplingBudget = 5000;
 	mySwitches->verbose = false;
 	mySwitches->targetNumSamples = -1;
 

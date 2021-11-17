@@ -46,6 +46,7 @@
 
 #include <math.h>
 #include <assert.h>
+#include <algorithm>
 
 struct vert{
 	double x[3];//x,y,z
